@@ -33,9 +33,8 @@ export default function CollapsibleBanner({ type }: any) {
       <>
          <div
             // Replace `absolute` with `fixed` if you want the banner fixed on the page. Note: Animation won't work with `absolute`.
-            className={`hidden sm:block absolute left-0 right-0 top-0 z-50 transition-all duration-300 ease-in-out ${
-               isVisible ? 'translate-y-0' : '-translate-y-full'
-            }`}
+            className={`hidden sm:block absolute left-0 right-0 top-0 z-50 transition-all duration-300 ease-in-out ${isVisible ? 'translate-y-0' : '-translate-y-full'
+               }`}
          >
             <div className='flex w-full items-center gap-x-6 bg-red-500 px-6 py-3 sm:px-3.5 sm:before:flex-1'>
                <div className='flex items-center text-sm font-medium leading-6 text-white'>
@@ -49,13 +48,13 @@ export default function CollapsibleBanner({ type }: any) {
                   </Link>
                </div>
                <div className='flex flex-1 justify-end'>
-                  {/* <button
+                  <button
                      type='button'
                      onClick={() => setIsVisible(false)}
                      aria-label='Dismiss'
                   >
                      <CloseIcon className='h-5 w-5 text-white' />
-                  </button> */}
+                  </button>
                </div>
             </div>
          </div>
