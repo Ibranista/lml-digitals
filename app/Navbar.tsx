@@ -12,6 +12,7 @@ function Navbar() {
   const NavLink = [
     { id: 1, title: 'Our Services', link: '/services' },
     { id: 2, title: 'About Us', link: '/about' },
+    { id: 3, title: 'Our Team', link: '/team' },
     // { id: 3, title: 'Blog', link: '/ourservices' },
   ];
   return (
