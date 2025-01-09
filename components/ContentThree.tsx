@@ -6,72 +6,51 @@ import Link from 'next/link';
 
 function ContentThree() {
    return (
-      //   <Container>
-      <div className='mx-6 md:mx-20 2xl:mx-44 flex flex-col items-center gap-28'>
-         <h1 className='text-3xl xl:text-4xl text-center align-middle font-bold max-w-4xl'>
+      <div className="mx-6 md:mx-20 2xl:mx-44 my-14 flex flex-col items-center gap-14">
+         <h1 className="text-3xl md:text-4xl text-center font-extrabold text-black max-w-4xl">
             We specialize in building{' '}
-            <span className='text-red-500'>brands</span> digitally, creating
-            <span className='text-red-500'> impactful</span> experiences
+            <span className="text-red-500">brands</span> digitally, creating
+            <span className="text-red-500"> impactful</span> experiences
          </h1>
 
-         <div className='flex flex-col items-center gap-10 md:flex md:flex-col  md:items-center md:justify-center lg:flex lg:flex-row  lg:gap-20 2xl:w-10/12 '>
-            <Image
-               src={groupPeople}
-               width={600}
-               height={600}
-               alt='group_people'
-               loading='lazy'
-               className='object-cover hover:scale-105 transition-all hover:duration-150 hover:delay-200 rounded-xl hidden xl:block'
-            />
-            <Image
-               src={groupPeople}
-               width={500}
-               height={500}
-               alt='group_people'
-               loading='lazy'
-               className='object-cover hover:scale-105 transition-all hover:duration-150 hover:delay-200 rounded-xl hidden md:block lg:hidden xl:hidden'
-            />
-            <Image
-               src={groupPeople}
-               width={500}
-               height={500}
-               alt='group_people'
-               loading='lazy'
-               className='object-cover hover:scale-105 transition-all hover:duration-150 hover:delay-200 rounded-xl hidden lg:block xl:hidden'
-            />
-            <Image
-               src={groupPeople}
-               width={400}
-               height={400}
-               alt='group_people'
-               loading='lazy'
-               className='object-cover hover:scale-105 transition-all hover:duration-150 hover:delay-200 rounded-xl   md:hidden lg:hidden xl:hidden'
-            />
-            <div className='flex flex-col items-center md:items-center lg:items-start gap-10'>
-               <h1 className='text-4xl font-bold md:text-center lg:text-start'>
+         <div className="flex flex-col lg:flex-row items-center gap-10 w-full bg-black text-white rounded-xl p-8 md:p-12 shadow-xl">
+            <div className="w-full lg:w-1/2 flex items-center justify-center">
+               <Image
+                  src={groupPeople}
+                  width={600}
+                  height={600}
+                  alt="group_people"
+                  loading="lazy"
+                  className="object-cover rounded-lg hover:scale-105 transition-transform duration-300 hidden md:block"
+               />
+            </div>
+
+            <div className="flex flex-col gap-8 w-full lg:w-1/2 justify-center">
+               <h2 className="text-3xl md:text-4xl font-bold text-red-500">
                   Elevating Brands through Innovative Digital Strategies
-               </h1>
-               <p className='md:text-center lg:text-start 2xl:w-3/4 leading-loose'>
-                  We&apos;re dedicated to elevating brands through a unique
-                  blend of creativity and performance. From enhancing social
-                  engagement and maximizing paid media effectiveness to creating
-                  compelling influencer campaigns, our strategies are tailored
-                  to amplify your brand&apos;s impact, driven by deep insights
-                  and strategic foresight.
+               </h2>
+               <p className="leading-relaxed text-sm md:text-base">
+                  We&apos;re dedicated to elevating brands through a unique blend of
+                  creativity and performance. From enhancing social engagement and
+                  maximizing paid media effectiveness to creating compelling influencer
+                  campaigns, our strategies are tailored to amplify your brand&apos;s
+                  impact, driven by deep insights and strategic foresight.
                </p>
 
-               <Link href={'/services'}>
-                  <div className='flex items-center gap-3'>
-                     <Button className='h-11 w-56 transition-all hover:bg-red-500 button-hover'>
-                        <span>See Our Services</span>
+               <Link href="/services">
+                  <div className="flex items-center gap-3">
+                     <Button className="h-11 w-44 md:w-56 bg-red-500 text-white font-semibold transition-all duration-300 hover:bg-red-600 rounded-md">
+                        See Our Services
                      </Button>
-                     <CircleArrowRight size={32} className='icon-hidden' />
+                     <CircleArrowRight
+                        size={28}
+                        className="text-red-500 transition-transform duration-300 hover:translate-x-2"
+                     />
                   </div>
                </Link>
             </div>
          </div>
       </div>
-      //   </Container>
    );
 }
 

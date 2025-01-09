@@ -7,30 +7,18 @@ function Hero() {
   return (
     <>
       <div className="lg:mt-10 2xl:mt-24  lg:mx-44 xl:mx-16  2xl:bg-transparent 2xl:mx-72 lg:flex lg:items-center lg:justify-center hidden   transition-all">
-        <div className="flex flex-col items-start gap-8 w-full     ">
+        <div className="flex flex-col w-full gap-8 p-8 items-start">
           <AnimatedLMLDigitalsBadge />
-          <h1 className="sm:text-4xl lg:text-4xl xl:text-5xl xl:w-full 2xl:text-6xl  2xl:w-10/12 leading-tight font-bold">
-            Transform your <span className="text-red-500">business</span> with
-            our innovative digital marketing and software{' '}
-            <span className="text-red-500">solutions</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-800">
+            Transform your <span className="text-red-600">business</span> with our innovative digital marketing and software <span className="text-red-600">solutions</span>
             <span className="text-yellow-500">.</span>
           </h1>
-
-          <div className="flex items-center gap-2">
-            <Link href={`/services`}>
-              <Button className="h-11 w-56 transition-all hover:bg-red-500">
+          <div className="flex items-center gap-4">
+            <Link href="/services">
+              <Button className="px-6 py-8 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md transition-all duration-300">
                 Browse Our Services
               </Button>
             </Link>
-            {/* <Link href={`/about`}>
-                     <Button
-                        variant={'ghost'}
-                        className='hover:bg-transparent space-x-2 group'
-                     >
-                        <span>Meet our team</span>
-                        <MoveRight size={16} className='hover-move-right' />
-                     </Button>
-                  </Link> */}
           </div>
         </div>
 

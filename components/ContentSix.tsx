@@ -8,42 +8,92 @@ import Link from 'next/link';
 
 function ContentSix() {
    return (
-      <div className='mx-3 md:mx-10 lg:mx-20 2xl:mx-44 md:mt-8 lg:mt-16 xl:mt-16 2xl:mt-20 border border-red-500 bg-red-500 flex  justify-center  h-1/3  rounded-2xl'>
-         <div className='w-full rounded-2xl  py-6'>
-            <div className='flex flex-col gap-6 items-center  xl:items-start  2xl:gap-8    lg:gap-6  justify-end  xl:h-5/6 pl-4 md:pl-10'>
-               <div className='flex flex-col items-center gap-4 lg:gap-6   xl:items-start'>
-                  <WordPullUp
-                     className='xl:text-5xl  font-bold tracking-[-0.02em] text-white dark:text-white text-3xl md:text-5xl lg:text-6xl 2xl:text-6xl md:leading-[4rem]'
-                     words={`Don't hesitate`}
-                  />
+      <div className="mx-3 md:mx-10 lg:mx-20 2xl:mx-44 mt-8 lg:mt-12 xl:mt-16 2xl:mt-20">
+         <div
+            className="
+          relative 
+          flex 
+          flex-col 
+          lg:flex-row 
+          items-center 
+          rounded-3xl 
+          overflow-hidden 
+          bg-gradient-to-r 
+          from-red-500 
+          to-black 
+          p-8 
+          md:p-12 
+          lg:p-16 
+          gap-6 
+          shadow-xl
+        "
+         >
+            {/* Text & Button Section */}
+            <div className="flex flex-col gap-6 w-full lg:w-1/2">
+               <WordPullUp
+                  className="
+              text-3xl 
+              md:text-4xl 
+              lg:text-5xl 
+              2xl:text-6xl 
+              font-extrabold 
+              leading-tight 
+              text-white
+            "
+                  words="Don't hesitate"
+               />
 
-                  {/* <SlightFlip
-                     className='xl:text-5xl  font-bold tracking-[-0.1em] text-black dark:text-white text-3xl md:text-5xl lg:text-6xl  md:leading-[5rem]'
-                     word={`Let's Chat`}
-                  /> */}
-               </div>
-               <div className='flex items-center gap-3'>
-                  <Link href={'/contact'} className='flex items-center gap-4'>
-                     <Button className='h-11 w-56 transition-all  button-hover hover:bg-transparent hover:outline-8 hover:outline-double hover:outline-black '>
-                        <span className='text-lg'>Let&apos;s chat</span>
-                     </Button>
-                     <CircleArrowRight size={32} className='icon-hidden ' />
+               <div className="flex items-center gap-3">
+                  <Link href="/#">
+                     <div className="flex items-center gap-3 group">
+                        <Button
+                           className="
+                    h-11 
+                    w-48 
+                    md:w-56 
+                    transition 
+                    duration-300 
+                    bg-white 
+                    text-red-600 
+                    font-semibold 
+                    rounded-md 
+                    hover:text-white 
+                    hover:bg-black
+                  "
+                        >
+                           <span className="text-lg">Let&apos;s chat</span>
+                        </Button>
+                        <CircleArrowRight
+                           size={32}
+                           className="
+                    text-white 
+                    group-hover:translate-x-2 
+                    transition-transform 
+                    duration-300
+                  "
+                        />
+                     </div>
                   </Link>
                </div>
             </div>
+
+            {/* Image Section */}
+            <div className="hidden lg:block lg:w-1/2 text-right">
+               <Image
+                  src={groupPeople}
+                  width={1200}
+                  height={500}
+                  alt="group_people"
+                  className="
+              rounded-2xl
+              object-cover
+              w-full
+              h-full
+              max-h-[24rem]
+            "
+               />
+            </div>
          </div>
-         <Image
-            src={groupPeople}
-            width={2000}
-            className='h-96 object-cover rounded-2xl hidden 2xl:block'
-            alt='group_people'
-         />
-         <Image
-            src={groupPeople}
-            width={1200}
-            className='h-96 object-cover rounded-2xl  hidden xl:block 2xl:hidden'
-            alt='group_people'
-         />
       </div>
    );
 }

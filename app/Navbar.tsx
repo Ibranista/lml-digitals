@@ -13,34 +13,32 @@ function Navbar() {
     { id: 1, title: 'Our Services', link: '/services' },
     { id: 2, title: 'About Us', link: '/about' },
     { id: 3, title: 'Our Team', link: '/team' },
-    // { id: 3, title: 'Blog', link: '/ourservices' },
   ];
   return (
     <>
       <CollapsibleBanner type={true} />
-      <div className="hidden lg:flex lg:items-center lg:justify-between  lg:px-8 xl:px-10 2xl:xl:px-40 mt-10">
+      <div className="hidden lg:flex lg:items-center lg:justify-between lg:px-10 xl:px-14 2xl:px-48 bg-gray-50 py-4 rounded-md shadow-md">
         <Link href={'/'}>
           <Image
             src={logo}
-            width={70}
-            height={70}
+            width={80}
+            height={80}
             alt="logo"
             loading="lazy"
-            className="hover:scale-110 hover:delay-100 hover:duration-150 transition-all"
+            className="hover:scale-125 hover:delay-75 hover:duration-150 transition-all"
           />
         </Link>
-
-        <ul className="hidden lg:flex lg:items-center lg:justify-evenly  lg:w-1/2  xl:w-1/3 ">
+        <ul className="hidden lg:flex lg:items-center lg:justify-evenly lg:w-1/2 xl:w-1/3">
           {NavLink.map((nav) => (
             <Link href={nav.link} key={nav.id}>
-              <li className="underline-animation hover:underline-offset-1 hover:border-b hover:border-red-500 font-bold">
+              <li className="underline-animation font-semibold text-gray-700 transition-colors hover:text-red-500">
                 {nav.title}
               </li>
             </Link>
           ))}
           <CoolMode>
             <Link href={'/contact'}>
-              <Button className="h-11 w-36 transition-all ">
+              <Button className="h-11 w-36 transition-all bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md">
                 Get in Touch
               </Button>
             </Link>
@@ -66,18 +64,16 @@ type MobileSizeProps = {
 function MobileSizeNavBar({ NavLinks }: MobileSizeProps) {
   return (
     <>
-      {/* <CollapsibleBanner type={true} /> */}
-      <div className="flex items-center justify-between px-4   sm:hidden lg:hidden">
+      <div className="flex items-center justify-between px-4 sm:hidden lg:hidden bg-gray-50 py-3 rounded-md shadow-md mt-4">
         <Link href={'/'}>
           <Image
             src={logo}
             width={70}
             height={70}
             alt="logo"
-            className="hover:scale-110 hover:delay-100 hover:duration-150 transition-all"
+            className="hover:scale-125 hover:delay-75 hover:duration-150 transition-all"
           />
         </Link>
-
         <Sheet>
           <SheetTrigger>
             <Image
@@ -85,29 +81,29 @@ function MobileSizeNavBar({ NavLinks }: MobileSizeProps) {
               width={30}
               height={30}
               alt="menu_icon"
-              className="menu-icon-animation"
+              className="hover:scale-110 hover:delay-75 hover:duration-150 transition-all"
             />
           </SheetTrigger>
-          <SheetContent side={'top'} className=" space-y-2">
-            <div className="flex flex-col justify-between gap-10">
+          <SheetContent side={'top'} className="space-y-4 bg-gray-100 p-6">
+            <div className="flex flex-col gap-8 items-center">
               <Image
                 src={logo}
                 width={60}
                 height={60}
                 alt="logo"
-                className="hover:scale-110 hover:delay-100 hover:duration-150 transition-all"
+                className="hover:scale-125 hover:delay-75 hover:duration-150 transition-all"
               />
-              <ul className="flex flex-col items-center justify-center w-full space-y-3">
+              <ul className="flex flex-col items-center w-full space-y-4">
                 {NavLinks.map((nav) => (
                   <Link href={nav.link} key={nav.id}>
-                    <li className="underline-animation hover:underline-offset-1 hover:border-b hover:border-red-500 font-bold">
+                    <li className="underline-animation font-semibold text-gray-700 transition-colors hover:text-red-500">
                       {nav.title}
                     </li>
                   </Link>
                 ))}
               </ul>
               <CoolMode>
-                <Button className="h-11 w-36 transition-all ">
+                <Button className="h-11 w-36 transition-all bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md">
                   Get in Touch
                 </Button>
               </CoolMode>
@@ -122,18 +118,16 @@ function MobileSizeNavBar({ NavLinks }: MobileSizeProps) {
 function MediumSizeNavBar({ NavLinks }: MobileSizeProps) {
   return (
     <>
-      {/* <CollapsibleBanner type={true} /> */}
-      <div className="hidden sm:flex sm:items-center sm:justify-between  sm:px-8   mt-10 lg:hidden">
+      <div className="hidden sm:flex sm:items-center sm:justify-between sm:px-8 mt-10 lg:hidden bg-gray-50 py-3 rounded-md shadow-md">
         <Link href={'/'}>
           <Image
             src={logo}
             width={50}
             height={50}
             alt="logo"
-            className="hover:scale-110 hover:delay-100 hover:duration-150 transition-all"
+            className="hover:scale-125 hover:delay-75 hover:duration-150 transition-all"
           />
         </Link>
-
         <Sheet>
           <SheetTrigger>
             <Image
@@ -141,29 +135,29 @@ function MediumSizeNavBar({ NavLinks }: MobileSizeProps) {
               width={30}
               height={30}
               alt="menu_icon"
-              className="menu-icon-animation"
+              className="hover:scale-110 hover:delay-75 hover:duration-150 transition-all"
             />
           </SheetTrigger>
-          <SheetContent side={'top'} className=" space-y-2">
-            <div className="flex flex-col justify-between gap-10">
+          <SheetContent side={'top'} className="space-y-4 bg-gray-100 p-6">
+            <div className="flex flex-col gap-8 items-center">
               <Image
                 src={logo}
                 width={60}
                 height={60}
                 alt="logo"
-                className="hover:scale-110 hover:delay-100 hover:duration-150 transition-all"
+                className="hover:scale-125 hover:delay-75 hover:duration-150 transition-all"
               />
-              <ul className="flex flex-col items-center justify-center w-full space-y-3">
+              <ul className="flex flex-col items-center w-full space-y-4">
                 {NavLinks.map((nav) => (
                   <Link href={nav.link} key={nav.id}>
-                    <li className="underline-animation hover:underline-offset-1 hover:border-b hover:border-red-500 font-bold">
+                    <li className="underline-animation font-semibold text-gray-700 transition-colors hover:text-red-500">
                       {nav.title}
                     </li>
                   </Link>
                 ))}
               </ul>
               <CoolMode>
-                <Button className="h-11 w-36 transition-all ">
+                <Button className="h-11 w-36 transition-all bg-red-500 hover:bg-red-600 text-white font-semibold rounded-md">
                   Get in Touch
                 </Button>
               </CoolMode>
