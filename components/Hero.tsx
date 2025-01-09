@@ -9,7 +9,7 @@ function Hero() {
       <div className="lg:mt-10 2xl:mt-24  lg:mx-44 xl:mx-16  2xl:bg-transparent 2xl:mx-72 lg:flex lg:items-center lg:justify-center hidden   transition-all">
         <div className="flex flex-col w-full gap-8 p-8 items-start">
           <AnimatedLMLDigitalsBadge />
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-800">
+          <h1 className="text-4xl md:text-4xl lg:text-3xl font-extrabold leading-tight text-gray-800">
             Transform your <span className="text-red-600">business</span> with our innovative digital marketing and software <span className="text-red-600">solutions</span>
             <span className="text-yellow-500">.</span>
           </h1>

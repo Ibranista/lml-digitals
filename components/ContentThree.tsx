@@ -13,7 +13,7 @@ function ContentThree() {
             <span className="text-red-500"> impactful</span> experiences
          </h1>
 
-         <div className="flex flex-col lg:flex-row items-center gap-10 w-full bg-black text-white rounded-xl p-8 md:p-12 shadow-xl">
+         <div className="flex flex-col lg:flex-row items-center gap-10 w-full text-gray-800 rounded-xl p-8 md:p-12 shadow-xl">
             <div className="w-full lg:w-1/2 flex items-center justify-center">
                <Image
                   src={groupPeople}
